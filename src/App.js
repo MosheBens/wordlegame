@@ -51,13 +51,13 @@ function App() {
 
     if(currWord.toLowerCase() + "\r" === correctWord){
       setGameOver({gameOver:true, guessedWord:true});
-      setEndGamePhoto(<img src={WinPhotoEnd} width={"300px"}/>)
+      setEndGamePhoto(<img src={WinPhotoEnd} width={"300px"} alt='photoWin'/>)
 
       return;
     }
     if(currAttempt.attempt === 5){
       setGameOver({gameOver:true, guessedWord:false});
-      setEndGamePhoto(<img src={GameOverPhotoEnd} width={"300px"}/>)
+      setEndGamePhoto(<img src={GameOverPhotoEnd} width={"300px"} alt='photoLose'/>)
     }
   };
 
@@ -70,7 +70,7 @@ function App() {
     setBoard(newBoard);
     setCurrAttempt({...currAttempt, letterPos: currAttempt.letterPos -1});
   };
-
+ 
   const onSelectLetter = (keyVal) => {
     if(currAttempt.letterPos > 4){
       return ;
