@@ -23,8 +23,6 @@ function App() {
   });
 
 
-  // const correctWord = "RIGHT";
-
   useEffect(() => {
     generateWordSet().then((words) => {
       setWordSet(words.wordSet);
